@@ -1,0 +1,32 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    position: relative;
+}
+
+* {
+    border: 1px solid red;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-image: darksalmon;
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+}
+
+.side-container {
+    border: 1px solid red;
+}
+
+/* <div class="top-search-container"></div> */
+
+/* <div class="top-info-container"></div> */
+
+/* <div class="main-container"></div> */
