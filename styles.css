@@ -1,32 +1,89 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-    position: relative;
-}
-
 * {
-    border: 1px solid red;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+*, *::after, *::before {
+    box-sizing: inherit;
+    position: relative;
+}
+
 html, body {
-    background-image: darksalmon;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: translateY(15rem);
+    /* transform: translateX(1rem); */
+    margin-left: 45px;
+    color: #e7f1ff;
+}
+
+p {
+    margin: 5px;
+    padding: 10px;
+    color: #e7f1ff;
 }
 
 .body-container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 3px;
-    grid-row-gap: 3px;
-}
+    justify-items: stretch;
+    grid-template-columns: 15% repeat(4, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    height: 100vh;
+    width: 100vw;
+ }
+   
+ .side-container {
+    background-color: rgb(53,64,82); 
+    display: grid;
+    justify-content: center;
+    grid-area: 1 / 1 / 12 / 2;
+ }
 
-.side-container {
-    border: 1px solid red;
-}
+.top-search-container {
+    background-color: #a3a3a3; 
+    grid-area: 1 / 2 / 2 / 6;
+ }
 
-/* <div class="top-search-container"></div> */
+.top-info-container {
+    background-color: #d0d9e6; 
+    grid-area: 2 / 2 / 4 / 6;
+ }
 
-/* <div class="top-info-container"></div> */
+.mid-container {
+    background-color: #5337cd; 
+    grid-area: 4 / 2 / 7 / 6;
+ }
 
-/* <div class="main-container"></div> */
+.bottom-container {
+    background-color: #97cb95; 
+    grid-area: 7 / 2 / 12 / 6;
+ }
+
+ .cowboy {
+    display: flex;
+    justify-self: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: 2.5rem;
+ }
+
+ .cowboy-name {
+    display: flex;
+    justify-self: center;
+    position: absolute;
+    font-size: 18px;
+    color: #e7f1ff;
+    margin-top: 10rem;
+ }
